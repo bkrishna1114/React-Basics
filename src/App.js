@@ -39,7 +39,7 @@ import './App.css';
 
 // export default App;
 
-// state and propts...
+// state and props...
 export default class App extends Component {
   state = {
     name : "Balu",
@@ -50,6 +50,12 @@ export default class App extends Component {
         <center>
           <h1>{this.state.name} Hello World !</h1>
           <Display name={this.state.name} />
+          <button className="submit"
+              onClick={
+                ()=>console.log("clicked")
+              }
+              
+          >Submit</button>
         </center>
       </div>
     )

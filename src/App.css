@@ -9,3 +9,11 @@ h1{
   margin: 1opx;
   background-color: aqua;
 }
+
+.submit{
+  color:darkblue;
+  background-color: wheat;
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: bold;
+}
