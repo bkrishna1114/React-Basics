@@ -133,54 +133,117 @@ import axios from "axios";
 //   )
 // }
 
-//Onsubmit Handler...
-const App = ( )=> {
-	const [data,setData] = useState({
-		username : "",
-		password : "",
-	})
-	const {username,password} = data;
-	//onchange.. usename , password..
-	const onChange = e=>{
-		setData({...data,[e.target.name]:[e.target.value]})
-	}
+// //Onsubmit Handler...
+// const App = ( )=> {
+// 	const [data,setData] = useState({
+// 		username : "",
+// 		password : "",
+// 	})
+// 	const {username,password} = data;
+// 	//onchange.. usename , password..
+// 	const onChange = e=>{
+// 		setData({...data,[e.target.name]:[e.target.value]})
+// 	}
 
-	//Onsubmit Handler..
-	const submitHandler = e =>{
-		e.preventDefault();
-		console.log(data);
-		//to send data to the backend..
-		// axios.post('url',data);
-	}
-  return(
-	<center>
-		<form onSubmit={submitHandler}>
-		<input
-			type="text"
-			name="username"
-			value={username}
-			onChange={onChange}
-			placeholder="user name"
-		/>
-		<br/>
-		<input
-			type="password"
-			name="password"
-			value={password}
-			onChange={onChange}
-			placeholder="password"
-		/>
-		<br/>
-		<input 
-			type="submit"
-			name="submit"
-		/>
-		</form>
-	</center>
-  )
-}
+// 	//Onsubmit Handler..
+// 	const submitHandler = e =>{
+// 		e.preventDefault();
+// 		console.log(data);
+// 		//to send data to the backend..
+// 		// axios.post('url',data);
+// 	}
+//   return(
+// 	<center>
+// 		<form onSubmit={submitHandler}>
+// 		<input
+// 			type="text"
+// 			name="username"
+// 			value={username}
+// 			onChange={onChange}
+// 			placeholder="user name"
+// 		/>
+// 		<br/>
+// 		<input
+// 			type="password"
+// 			name="password"
+// 			value={password}
+// 			onChange={onChange}
+// 			placeholder="password"
+// 		/>
+// 		<br/>
+// 		<input 
+// 			type="submit"
+// 			name="submit"
+// 		/>
+// 		</form>
+// 	</center>
+//   )
+// }
 
+
+// export default App;
+
+
+
+// Map Fucntion in React JS.
+
+// const App= () => {
+// 	const array = ["data analyst","data engineer","python developer",'PowerBI developer']
+// 	const obj = [
+// 		{ id: 1, name: 'data analyst' },
+// 		{ id: 2, name: 'data engineer' },
+// 		{ id: 3, name: 'python developer' },
+// 		{ id: 4, name: 'PowerBI developer' }
+// 	  ]	  
+
+// 	return (
+// 		<div>
+// 			<h1>List in Map</h1>
+// 			<div>
+// 				{
+// 					array.map(
+// 						(value,index) => <li key={index}>{index} {value}</li>
+// 					)
+// 				}
+// 				<div>
+// 					<h1>Objects in Map</h1>
+// 					{
+// 						obj.map(
+// 						 (value)=>  <li key={value.id}>{value.id} {value.name}</li>
+// 						)
+// 					}
+// 				</div>
+// 			</div>
+// 		</div>
+// 	)
+// };
+
+// export default App;
+
+
+// using filter in react.. App
+const App = () =>{
+	const array = [12,34,546,678,34,67,23]
+	const obj = [
+		{ id: 1, name: 'data analyst' },
+		{ id: 2, name: 'data engineer' },
+		{ id: 3, name: 'python developer' },
+		{ id: 4, name: 'PowerBI developer' }
+	]; 
+	// array filete function....
+	const filtered_arr = array.filter(value => value>0);
+	const filtered_obj = obj.filter(value => value.name.includes('a'));
+	return(
+		<div>
+			<h2>filtered</h2>
+			{
+				filtered_arr.map(value => <li>{value}</li>)
+			}
+			{
+				filtered_obj.map(value => <li>{value.name}</li>)
+			}
+		</div>
+	)
+};
 
 export default App;
-
-
