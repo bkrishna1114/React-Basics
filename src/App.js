@@ -2,6 +2,9 @@ import React,{Component,useEffect,useState} from "react";
 import Display from "./display";
 import './App.css';
 import axios from "axios";
+import Header from "./components/Header";
+import {Footer} from "./components/Footer";
+import Home from "./components/Home";
 
 // const App  = () => {
 //   return(
@@ -222,28 +225,42 @@ import axios from "axios";
 
 
 // using filter in react.. App
-const App = () =>{
-	const array = [12,34,546,678,34,67,23]
-	const obj = [
-		{ id: 1, name: 'data analyst' },
-		{ id: 2, name: 'data engineer' },
-		{ id: 3, name: 'python developer' },
-		{ id: 4, name: 'PowerBI developer' }
-	]; 
-	// array filete function....
-	const filtered_arr = array.filter(value => value>0);
-	const filtered_obj = obj.filter(value => value.name.includes('a'));
-	return(
-		<div>
-			<h2>filtered</h2>
-			{
-				filtered_arr.map(value => <li>{value}</li>)
-			}
-			{
-				filtered_obj.map(value => <li>{value.name}</li>)
-			}
-		</div>
-	)
-};
+// const App = () =>{
+// 	const array = [12,34,546,678,34,67,23]
+// 	const obj = [
+// 		{ id: 1, name: 'data analyst' },
+// 		{ id: 2, name: 'data engineer' },
+// 		{ id: 3, name: 'python developer' },
+// 		{ id: 4, name: 'PowerBI developer' }
+// 	]; 
+// 	// array filete function....
+// 	const filtered_arr = array.filter(value => value>0);
+// 	const filtered_obj = obj.filter(value => value.name.includes('a'));
+// 	return(
+// 		<div>
+// 			<h2>filtered</h2>
+// 			{
+// 				filtered_arr.map(value => <li>{value}</li>)
+// 			}
+// 			{
+// 				filtered_obj.map(value => <li>{value.name}</li>)
+// 			}
+// 		</div>
+// 	)
+// };
 
-export default App;
+// export default App;
+
+
+// export default function App() {
+//   return (
+// 	<div>
+// 		<Header/>
+// 		<Footer/>
+// 		<Home/>
+// 	</div>
+//   )
+// }
+
+
+
