@@ -5,12 +5,11 @@ import ReactDOM from 'react-dom/client';
 import Login from './user/login';
 import Register from './user/register';
 import reportWebVitals from './reportWebVitals';
-
+import Calculator from './tasks/calculator';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Login />
-    <Register />
+    <Calculator/>
   </React.StrictMode>
 );
 
