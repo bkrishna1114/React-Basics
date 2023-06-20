@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 // import './index.css';
 // import App from './App';
 // import Login from './user/login';
-// import Register from './user/register';
+import Register from './user/register';
 import reportWebVitals from './reportWebVitals';
 // import Calculator from './tasks/calculator';
 import FetchData from './tasks/fetch';
@@ -12,7 +12,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <Calculator/> */}
-    <FetchData />
+    {/* <FetchData /> */}
+    <Register/>
   </React.StrictMode>
 );
 

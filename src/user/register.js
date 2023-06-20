@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
+import axios from "axios";
 
 // Creating a react registration form...
 const Register = () => {
@@ -25,7 +26,9 @@ const Register = () => {
         }
         else{
             console.log(data)
-            alert('Registration Successful')
+            // putting data to firebase...
+            axios.put('https://reactbasics-968c1-default-rtdb.firebaseio.com/registration.json',data).then( () =>alert('Registration Successful')
+            )
         }
     };
 
