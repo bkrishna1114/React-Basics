@@ -5,6 +5,7 @@ import axios from "axios";
 import Header from "./components/Header";
 import {Footer} from "./components/Footer";
 import Home from "./components/Home";
+import {Router,BrowserRouter,Switch} from 'react-router-dom'
 
 // const App  = () => {
 //   return(

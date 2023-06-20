@@ -19,7 +19,7 @@ const Register = () => {
     const onsubmitHandler = e =>{
         e.preventDefault();
         if(name.length <=5){
-            alert("name lenght should'nt be less than 5")
+            alert("name length should'nt be less than 5")
         }
         else if(password!==retype_password){
             alert('password not matching')
