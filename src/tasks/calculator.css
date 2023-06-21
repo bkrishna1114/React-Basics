@@ -1,0 +1,65 @@
+/* Calculator container */
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+  }
+  
+  /* Input field */
+  .calculator input {
+    grid-column: 1 / -1;
+    height: 40px;
+    font-size: 20px;
+    text-align: right;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Number and operator buttons */
+  .calculator button {
+    height: 60px;
+    font-size: 18px;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  /* Special buttons */
+  .calculator .equals {
+    background-color: #4CAF50;
+    color: #fff;
+  }
+  
+  .calculator .clear {
+    background-color: #f44336;
+    color: #fff;
+  }
+  
+  .calculator .backspace {
+    background-color: #2196F3;
+    color: #fff;
+  }
+  
+  .calculator .operator {
+    background-color: #e0e0e0;
+  }
+  
+  /* Hover and active states */
+  .calculator button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .calculator button:active {
+    background-color: #ccc;
+  }
+  

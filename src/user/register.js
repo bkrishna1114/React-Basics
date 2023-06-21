@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
+import axios from "axios";
 
 // Creating a react registration form...
 const Register = () => {
@@ -18,14 +19,16 @@ const Register = () => {
     const onsubmitHandler = e =>{
         e.preventDefault();
         if(name.length <=5){
-            alert("name lenght should'nt be less than 5")
+            alert("name length should'nt be less than 5")
         }
         else if(password!==retype_password){
             alert('password not matching')
         }
         else{
             console.log(data)
-            alert('Registration Successful')
+            // putting data to firebase...
+            axios.put('https://reactbasics-968c1-default-rtdb.firebaseio.com/registration.json',data).then( () =>alert('Registration Successful')
+            )
         }
     };
 
