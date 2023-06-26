@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import {useNavigate} from 'react-router-dom';
 
 // Creating a react registration form...
 const Login = () => {
@@ -7,6 +8,7 @@ const Login = () => {
 		username : '',
 		password :'',
 	});
+  let navigate = useNavigate();
     const {username,password} = data;
 
     const onChangeHandler = e => {
@@ -15,7 +17,8 @@ const Login = () => {
 
     const onsubmitHandler = e =>{
         e.preventDefault()
-        console.log(data)
+        console.log(data);
+        navigate('/about')
     }
   return (
 	<div>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Navigate, RedirectFunction} from 'react-router-dom'
+import { Navigate} from 'react-router-dom'
 
 export const Home = () => {
   const [auth,setAuth] = useState(false)
@@ -11,6 +11,7 @@ export const Home = () => {
       <center>
           <h1>Welcome Home</h1>
           <button onClick={() => setAuth(true)}>LogIn</button>
+          {/* <button>about</button> */}
       </center>
     </div>
   )
